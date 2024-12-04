@@ -36,7 +36,7 @@ header {
     gap: 10px;
 }
 
-#saveButton, #clearButton {
+#saveButton, #clearButton, #downloadButton, #undoButton, #redoButton {
     background-color: #34a853;
     color: white;
     border: none;
@@ -97,4 +97,24 @@ button:focus, select:focus, input[type="color"]:focus {
 #editor[contenteditable="true"]:empty::before {
     content: attr(placeholder);
     color: #ccc;
+}
+
+footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer button {
+    background-color: #4285f4;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #3367d6;
 }

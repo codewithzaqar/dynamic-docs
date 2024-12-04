@@ -73,6 +73,15 @@ document.getElementById('alignRightButton').addEventListener('click', function()
     document.execCommand('justifyRight');
 });
 
+// Bulleted and Numbered List Buttons
+document.getElementById('bulletListButton').addEventListener('click', function() {
+    document.execCommand('insertUnorderedList')
+})
+
+document.getElementById('numberListButton').addEventListener('click', function() {
+    document.execCommand('insertOrderedList')
+})
+
 // Font size selector
 document.getElementById('fontSizeSelect').addEventListener('change', function(event) {
     const fontSize = event.target.value;
@@ -91,3 +100,26 @@ document.getElementById('textColor').addEventListener('input', function(event) {
 document.getElementById('bgColor').addEventListener('input', function(event) {
     document.execCommand('backColor', false, event.target.value);
 });
+
+// Download content as HTML file
+document.getElementById('downloadButton').addEventListener('click', function() {
+    const content = document.getElementById('editor').innerHTML;
+    const title = document.getElementById('documentTitle').value || "document";
+    const blob = new Blob([content], { type: "text/html" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${title}.html`;
+    a.click();
+
+    URL.revokeObjectURL(url);
+});
+
+document.getElementById('undoButton').addEventListener('click', function() {
+    document.execCommand('undo')
+})
+
+document.getElementById('redoButton').addEventListener('click', function() {
+    document.execCommand('redo')
+})
