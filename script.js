@@ -32,3 +32,16 @@ window.onload = function() {
         document.getElementById('editor').innerHTML = savedContent
     }
 }
+
+// Bold, Italic, and Underline Button Functions
+document.getElementById('boldButton').addEventListener('click', function() {
+    document.execCommand('bold')
+})
+
+document.getElementById('italicButton').addEventListener('click', function() {
+    document.execCommand('italic')
+})
+
+document.getElementById('underlineButton').addEventListener('click', function() {
+    document.execCommand('underline')
+})
