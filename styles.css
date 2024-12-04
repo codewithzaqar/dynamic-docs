@@ -17,6 +17,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     height: 20vh;
+    border-radius: 10px;
 }
 
 header {
@@ -26,6 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 10px;
 }
 
 .toolbar {
@@ -49,6 +51,34 @@ header {
     padding: 8px;
     font-size: 18px;
     flex-grow: 1;
+    border-radius: 5px;
+}
+
+.formatting-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button, select, input[type="color"] {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button:active {
+    background-color: #bbb;
+}
+
+button:focus, select:focus, input[type="color"]:focus {
+    outline: none;
 }
 
 #editor {
@@ -60,6 +90,7 @@ header {
     font-size: 16px;
     line-height: 1.6;
     outline: none;
+    border-radius: 5px;
 }
 
 #editor[contenteditable="true"]:empty::before {
