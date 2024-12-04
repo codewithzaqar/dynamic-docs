@@ -28,7 +28,13 @@ window.onload = function() {
     }
 };
 
-// Bold, Italic, Underline Button Functions
+// Clear the editor and title
+document.getElementById('clearButton').addEventListener('click', function() {
+    document.getElementById('editor').innerHTML = ""
+    document.getElementById('documentTitle').value = ""
+})
+
+// Bold, Italic, Underline, Strikethrough Button Functions
 document.getElementById('boldButton').addEventListener('click', function() {
     document.execCommand('bold');
 });
@@ -40,6 +46,19 @@ document.getElementById('italicButton').addEventListener('click', function() {
 document.getElementById('underlineButton').addEventListener('click', function() {
     document.execCommand('underline');
 });
+
+document.getElementById('strikethroughButton').addEventListener('click', function() {
+    document.execCommand('strikeThrough')
+})
+
+// Subscript and Superscript Buttons
+document.getElementById('subscriptButton').addEventListener('click', function() {
+    document.execCommand('subscript')
+})
+
+document.getElementById('superscriptButton').addEventListener('click', function() {
+    document.execCommand('superscript')
+})
 
 // Text alignment buttons
 document.getElementById('alignLeftButton').addEventListener('click', function() {

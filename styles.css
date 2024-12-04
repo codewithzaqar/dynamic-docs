@@ -16,7 +16,7 @@ body {
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    height: 20vh;
+    height: 90vh;
     border-radius: 10px;
 }
 
@@ -33,9 +33,10 @@ header {
 .toolbar {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
-#saveButton {
+#saveButton, #clearButton {
     background-color: #34a853;
     color: white;
     border: none;
@@ -96,26 +97,4 @@ button:focus, select:focus, input[type="color"]:focus {
 #editor[contenteditable="true"]:empty::before {
     content: attr(placeholder);
     color: #ccc;
-}
-
-button {
-    background: #fff;
-    color: #333;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-button:hover {
-    background-color: #ddd;
-}
-
-button:active {
-    background-color: #bbb;
-}
-
-button:focus {
-    outline: none;
 }
